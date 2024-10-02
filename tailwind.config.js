@@ -10,6 +10,13 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        black: "#0B0D17",
+        blue: "#D0D6F9",
+        yellow: "#FFFFFF",
+      },
+      fontFamily: {
+        barlow: ["Barlow Condensed", "sans-serif"],
+        bellefair: ["Bellefair", "serif"],
       },
     },
   },

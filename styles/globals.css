@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav_text {
+  @apply text-base text-white text-center font-normal uppercase;
+}
+
+.nav_bold {
+  @apply font-bold;
+}
+
+.nav_background {
+  @apply bg-[#FFFFFF0A] backdrop-blur-2xl;
+}
+
+.nav_display {
+  @apply md:hidden lg:inline-block;
+}
+
+.details_h1 {
+  @apply hidden;
+}
+
+.details_span {
+  @apply hidden;
+}
+
+.pages_h1 {
+  @apply text-white text-base font-normal uppercase;
+}
+
+.pages_span {
+  @apply font-bold opacity-40;
+}
+
+.pages_p {
+  @apply text-center lg:text-left text-blue text-sm mb-8 max-w-md sm:text-base;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
