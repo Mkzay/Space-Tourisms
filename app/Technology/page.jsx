@@ -14,7 +14,7 @@ const Technology = () => {
   const currentTechnology = technologyInfo[selectedTechnology];
 
   return (
-    <section className="font-barlow flex flex-col justify-between pt-24 pb-10 sm:pt-44 bg-[url(/assets/technology/background-technology-mobile.jpg)] sm:bg-[url(/assets/technology/background-technology-tablet.jpg)] lg:flex-row lg:px-36 lg:h-screen lg:bg-[url(/assets/technology/background-technology-desktop.jpg)] bg-no-repeat bg-cover lg:bg-auto">
+    <section className="font-barlow flex flex-col justify-between pt-24 pb-10 sm:pt-44 bg-[url(/assets/technology/background-technology-mobile.jpg)] sm:bg-[url(/assets/technology/background-technology-tablet.jpg)] lg:flex-row lg:px-36 h-screen lg:bg-[url(/assets/technology/background-technology-desktop.jpg)] bg-no-repeat bg-cover lg:bg-auto">
       <div className="flex flex-col items-center justify-center gap-8">
         <h1 className="pages_h1">
           <span className="pages_span">03</span> Pick your technology
