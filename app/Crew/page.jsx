@@ -8,7 +8,7 @@ import crewMembers from "@/public/assets/data/crew";
 const Crew = () => {
   console.log(crewMembers);
   return (
-    <section className="font-barlow flex flex-col gap-8 pt-24 pb-10 min-h-screen sm:pt-44 bg-[url(/assets/crew/background-crew-mobile.jpg)] sm:bg-[url(/assets/crew/background-crew-tablet.jpg)] lg:px-36 lg:bg-[url(/assets/crew/background-crew-desktop.jpg)] bg-no-repeat bg-cover lg:bg-auto">
+    <section className="font-barlow flex flex-col gap-8 lg:gap-0 pt-24 pb-10 lg:pb-0 min-h-screen sm:pt-44 lg:pt-36 bg-[url(/assets/crew/background-crew-mobile.jpg)] sm:bg-[url(/assets/crew/background-crew-tablet.jpg)] lg:px-36 lg:bg-[url(/assets/crew/background-crew-desktop.jpg)] bg-no-repeat bg-cover lg:bg-auto">
       <div className="flex items-center justify-center lg:justify-start">
         <h1 className="pages_h1">
           <span className="pages_span">02 </span>

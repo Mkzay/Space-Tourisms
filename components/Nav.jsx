@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -10,8 +10,22 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const navRef = useRef(null);
 
   const toggle = () => setIsOpen((prevState) => !prevState);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const activeLink =
     "border-r-2 pr-20 md:pr-0 md:pb-9 md:border-r-0  md:border-b-2";
@@ -34,6 +48,7 @@ const Nav = () => {
           <FontAwesomeIcon icon={faBars} />
         </button>
         <ul
+          ref={navRef}
           className={`${
             isOpen
               ? "translate-x-0  duration-300 ease-in"
